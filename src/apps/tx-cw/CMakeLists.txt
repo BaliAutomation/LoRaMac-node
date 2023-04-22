@@ -52,7 +52,7 @@ add_executable(${PROJECT_NAME}
 # Loops through all regions and add compile time definitions for the enabled ones.
 foreach( REGION ${REGION_LIST} )
     if(${REGION})
-        target_compile_definitions(${PROJECT_NAME} PUBLIC -D"${REGION}")
+        target_compile_definitions(${PROJECT_NAME} PUBLIC -D${REGION})
     endif()
 endforeach()
 
